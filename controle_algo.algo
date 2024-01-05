@@ -1,0 +1,21 @@
+Algorithm: IsPalindrome(word)
+Input: A string word
+Output: True if word is a palindrome, False otherwise
+
+ n ← length of word
+ if n == 0 or n == 1 then
+     return True  // A word with 0 or 1 character is a palindrome
+ end if
+ 
+ start ← 0
+ end ← n - 1
+ 
+ while start < end do
+     if word[start] != word[end] then
+         return False  // Characters at the ends don't match
+     end if
+     start ← start + 1
+     end ← end - 1
+ end while
+ 
+ return True  // All characters matched, the word is a palindrome
